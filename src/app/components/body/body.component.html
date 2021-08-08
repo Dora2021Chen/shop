@@ -1,17 +1,9 @@
 <table>
-<tr>
-    <td><img src="../../../assets/pictures/eg_chinarose.jpg" /></td>
-    <td><img src="../../../assets/pictures/eg_chinarose.jpg" /></td>
-    <td><img src="../../../assets/pictures/eg_chinarose.jpg" /></td>
-</tr>
-<tr>
-    <td><img src="../../../assets/pictures/eg_chinarose.jpg" /></td>
-    <td><img src="../../../assets/pictures/eg_chinarose.jpg" /></td>
-    <td><img src="../../../assets/pictures/eg_chinarose.jpg" /></td>
-</tr>
-<tr>
-    <td><img src="../../../assets/pictures/eg_chinarose.jpg" /></td>
-    <td><img src="../../../assets/pictures/eg_chinarose.jpg" /></td>
-    <td><img src="../../../assets/pictures/eg_chinarose.jpg" /></td>
+<tr *ngFor="let row of rows;let indexRow=index">
+    <td *ngFor="let col of cols;let indexCol=index">
+        <img src="../../../assets/pictures/eg_chinarose.jpg" />
+        <h6>description</h6>
+        <h6>rows:{{row}} cols:{{col}}</h6>
+    </td>
 </tr>
 </table>
