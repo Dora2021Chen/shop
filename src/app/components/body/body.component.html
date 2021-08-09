@@ -1,9 +1,10 @@
 <table>
-<tr *ngFor="let row of rows;let indexRow=index">
-    <td *ngFor="let col of cols;let indexCol=index">
-        <img src="../../../assets/pictures/eg_chinarose.jpg" />
-        <h6>description</h6>
-        <h6>rows:{{row}} cols:{{col}}</h6>
-    </td>
-</tr>
+    <tr *ngFor="let row of goodsMatrix;let indexRow=index">
+        <td *ngFor="let col of goodsMatrix[indexRow];let indexCol=index">
+            <img src="../../../assets/pictures/eg_chinarose.jpg" />
+            <h6>description</h6>
+            <h6>rows:{{indexRow}} cols:{{indexCol}}</h6>
+            <h6>name: {{goods[goodsMatrix[indexRow][indexCol]].name}}</h6>
+        </td>
+    </tr>
 </table>
