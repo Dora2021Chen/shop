@@ -8,7 +8,7 @@ import { catchError, retry } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class UserService {
-  userApiUrl: string = 'localhost:8080/api/shop/user/getAll';
+  userApiUrl: string = 'http://localhost:8080/api/shop/user/getAll';
   constructor(private http: HttpClient) { }
 
   getUsers():Observable<ResponseRows> {

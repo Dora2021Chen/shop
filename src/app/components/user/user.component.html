@@ -1,1 +1,9 @@
-<p>user works!</p>
+<table>
+    <tr *ngFor="let user of responseRows.entities">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.phone}}</td>
+        <td>{{user.email}}</td>
+    </tr>
+</table>

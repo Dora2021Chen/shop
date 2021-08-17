@@ -10,14 +10,18 @@ import { ResponseRows } from 'src/app/service/responseRows';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  responseRows: Observable<ResponseRows> | undefined;
+  responseRows: ResponseRows = new ResponseRows;
 
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
+    this.getUsers();
+    console.log(this.responseRows);
   }
 
   getUsers() {
-    this.responseRows = this.userService.getUsers();
+    this.userService.getUsers().subscribe((data: ResponseRows) => {
+      this.responseRows = data;
+    })
   }
 }
