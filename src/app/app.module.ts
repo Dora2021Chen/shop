@@ -5,15 +5,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { BodyComponent } from './components/body/body.component';
-import { UserComponent } from './components/user/user.component';
+import { GoodsComponent } from './components/goods/goods.component';
+import { UsersComponent } from './components/users/users.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    BodyComponent,
-    UserComponent
+    GoodsComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,

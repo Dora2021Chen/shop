@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Good } from 'src/app/Good';
 
 @Component({
-  selector: 'app-body',
-  templateUrl: './body.component.html',
-  styleUrls: ['./body.component.css']
+  selector: 'app-goods',
+  templateUrl: './goods.component.html',
+  styleUrls: ['./goods.component.css']
 })
-export class BodyComponent implements OnInit {
+export class GoodsComponent implements OnInit {
   goods = [
     new Good(1, 'apple'),
     new Good(2, 'banana'),
@@ -33,5 +33,4 @@ export class BodyComponent implements OnInit {
       this.goodsMatrix.push(rows)
     }
   }
-
 }
