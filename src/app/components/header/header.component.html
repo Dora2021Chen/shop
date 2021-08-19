@@ -2,6 +2,8 @@
   <li><a routerLink="goods">Goods</a></li>
   <li><a routerLink="users">Users</a></li>
   <li style="float:right"><a class="active" routerLink="user">Dora</a></li>
+  <li *ngIf='globalService.getLoginUser()!=null' style="float:right"><a routerLink="">Logout</a></li>
+  <li *ngIf='globalService.getLoginUser()==null' style="float:right"><a routerLink="login">Login</a></li>
 </ul>
 
 <router-outlet></router-outlet>

@@ -8,11 +8,11 @@ import { catchError, retry } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class UserService {
-  userApiUrl: string = 'http://localhost:8080/api/shop/user/getAll';
+  userApiUrl: string = 'http://localhost:8080/api/shop/user/';
   constructor(private http: HttpClient) { }
 
   getUsers():Observable<ResponseRows> {
     // now returns an Observable of Config
-    return this.http.get<ResponseRows>(this.userApiUrl);
+    return this.http.get<ResponseRows>(`${this.userApiUrl}getAll`);
   }
 }

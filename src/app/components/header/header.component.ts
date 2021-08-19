@@ -1,3 +1,4 @@
+import { GlobalService } from './../../service/global.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  constructor(public globalService: GlobalService) { }
 
   ngOnInit(): void {
   }
