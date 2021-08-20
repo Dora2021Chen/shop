@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ResponseRows } from 'src/app/service/responseRows';
+import { ResponseRows } from 'src/app/model/responseRows';
 import { UserService } from 'src/app/service/user.service';
 
 @Component({

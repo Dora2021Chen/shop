@@ -1,4 +1,4 @@
-import { UserData } from './user';
+import { UserData } from '../model/user';
 import { Injectable } from '@angular/core';
 
 @Injectable({

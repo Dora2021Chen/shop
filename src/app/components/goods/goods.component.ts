@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Good } from 'src/app/Good';
+import { Good } from 'src/app/model/Good';
 
 @Component({
   selector: 'app-goods',
