@@ -18,11 +18,11 @@ export class UserService {
     return this.http.get<ResponseRows>(`${this.userApiUrl}getAll`);
   }
 
-  login(): Promise<ResponseRow> {
+  login(username: string, password: string): Promise<ResponseRow> {
     // now returns an Observable of Config
     let params = new HttpParams();
-    params = params.append('username', 'admin');
-    params = params.append('password', 'admin');
+    params = params.append('username', username);
+    params = params.append('password', password);
     return this.http.get<ResponseRow>(`${this.userApiUrl}login`, { params: params }).toPromise();
   }
 }
