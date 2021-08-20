@@ -1,5 +1,5 @@
-import { UserData } from '../model/user';
 import { Injectable } from '@angular/core';
+import { UserData } from '../model/user';
 
 @Injectable({
   providedIn: 'root'
@@ -15,5 +15,9 @@ export class GlobalService {
 
   public setLoginUser(loginUser: UserData) {
     this.loginUser = loginUser;
+  }
+
+  public clearLoginUser() {
+    this.loginUser = null;
   }
 }
