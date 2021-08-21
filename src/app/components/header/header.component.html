@@ -1,11 +1,11 @@
 <ul>
   <li><a routerLink="goods">Goods</a></li>
   <li><a routerLink="users">Users</a></li>
-  <div *ngIf='globalService.getLoginUser()!=null'>
-    <li style="float:right"><a class="active" routerLink="user"></a>globalService.getLoginUser().name</li>
+  <div *ngIf='globalService.hasLogin()'>
+    <li style="float:right"><a class="active" routerLink="user">ABC</a></li>
     <li style="float:right"><a routerLink="">Logout</a></li>
   </div>
-  <div *ngIf='globalService.getLoginUser()==null'>
+  <div *ngIf='!globalService.hasLogin()'>
     <li style="float:right"><a routerLink="login">Login</a></li>
   </div>
 

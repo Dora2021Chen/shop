@@ -1,4 +1,5 @@
 <div>
+    <span *ngIf="error!=null">{{error}}</span>
     <div>
         <label>First Name:</label>
         <input type="text" [(ngModel)]="firstName" />

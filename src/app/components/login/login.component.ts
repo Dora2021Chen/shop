@@ -24,7 +24,6 @@ export class LoginComponent implements OnInit {
   }
 
   async login(): Promise<void> {
-    console.log('hello world, now login...');
     if (this.username == null || this.username.length == 0) {
       this.error = "please input username.";
       return;
@@ -35,16 +34,16 @@ export class LoginComponent implements OnInit {
       return;
     }
     this.error = null;
-    console.log("username:" + this.username + " password:" + this.password);
+    //console.log("username:" + this.username + " password:" + this.password);
     this.responseRow = await this.userService.login(this.username, this.password);
 
     if (this.responseRow.statusCode == 0) {
       this.globalService.setLoginUser(this.responseRow.entity);
-      console.log('login succeeded');
+      //console.log('login succeeded');
     } else {
       this.globalService.clearLoginUser();
       this.error = this.responseRow.statusCode + ":" + this.responseRow.statusMsg;
-      console.log('login failed');
+      //console.log('login failed');
     }
   }
 }

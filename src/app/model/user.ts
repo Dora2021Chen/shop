@@ -1,8 +1,9 @@
 export class UserData {
-    id: number | undefined;
-    name: string | undefined;
-    username: string | undefined;
-    password: string | undefined;
-    phone: string | undefined;
-    email: string | undefined;
+    id!: number;
+    firstName!: string;
+    lastName!: string;
+    username!: string;
+    password!: string;
+    phone!: string;
+    email!: string;
 }
