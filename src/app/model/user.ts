@@ -1,9 +1,11 @@
 export class UserData {
-    id!: number;
-    firstName!: string;
-    lastName!: string;
-    username!: string;
-    password!: string;
-    phone!: string;
-    email!: string;
+    constructor(
+        public firstName: string,
+        public lastName: string,
+        public username: string,
+        public password: string,
+        public phone: string,
+        public email: string,
+        public id?: number,
+    ) { }
 }

@@ -5,29 +5,25 @@ import { UserData } from '../model/user';
   providedIn: 'root'
 })
 export class GlobalService {
-  private loginUser?: UserData;
+  private loginUser: UserData | null = null;
 
   constructor() { }
 
   public hasLogin(): boolean {
     if (this.loginUser == null) {
-      return true;
+      return false;
     }
-    return false;
+    return true;
   }
 
   public getDisplayName(): string | null {
     if (this.loginUser != null)
-      return this.loginUser.firstName.substring(1, 2) + this.loginUser.lastName?.substring(1, 2);
+      return this.loginUser.firstName.substring(0, 1) + this.loginUser.lastName?.substring(0, 1);
     return "N/A";
   }
 
   public getLoginUser(): UserData | null {
-    console.log(this.loginUser);
-    if (this.loginUser != null)
-      return this.loginUser;
-
-    return null;
+    return this.loginUser;
   }
 
   public setLoginUser(loginUser: UserData) {
@@ -35,6 +31,6 @@ export class GlobalService {
   }
 
   public clearLoginUser() {
-    this.loginUser = new UserData();
+    this.loginUser = null;
   }
 }

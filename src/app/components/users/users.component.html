@@ -1,7 +1,16 @@
 <table>
+    <tr>
+        <th>id</th>
+        <th>firstName</th>
+        <th>lastName</th>
+        <th>username</th>
+        <th>phone</th>
+        <th>email</th>
+    </tr>
     <tr *ngFor="let user of responseRows.entities">
         <td>{{user.id}}</td>
-        <td>{{user.name}}</td>
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
         <td>{{user.username}}</td>
         <td>{{user.phone}}</td>
         <td>{{user.email}}</td>

@@ -1,9 +1,7 @@
 import { GlobalService } from './../../service/global.service';
 import { UserService } from 'src/app/service/user.service';
-import { ResponseRows } from 'src/app/model/responseRows';
 import { UserData } from './../../model/user';
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { ResponseRow } from 'src/app/model/responseRow';
 
 @Component({
@@ -12,7 +10,7 @@ import { ResponseRow } from 'src/app/model/responseRow';
   styleUrls: ['./create-user.component.css']
 })
 export class CreateUserComponent implements OnInit {
-  userData: UserData | null = new UserData();
+  userData: UserData | null = null;
   error: string | null = null;
   responseRow: ResponseRow | null = null;
 
@@ -31,13 +29,14 @@ export class CreateUserComponent implements OnInit {
   }
 
   async createUser(): Promise<void> {
-    this.userData = new UserData();
-    this.userData.firstName = this.firstName;
-    this.userData.lastName = this.lastName;
-    this.userData.username = this.username;
-    this.userData.password = this.password;
-    this.userData.phone = this.phone;
-    this.userData.email = this.email;
+    this.userData = new UserData(
+      this.firstName,
+      this.lastName,
+      this.username,
+      this.password,
+      this.phone,
+      this.email
+    );
     console.log('hello')
     this.responseRow = await this.userService.createUser(this.userData);
 
