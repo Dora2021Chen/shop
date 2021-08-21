@@ -11,7 +11,7 @@ import { ResponseRow } from 'src/app/model/responseRow';
 })
 export class CreateUserComponent implements OnInit {
   userData: UserData | null = null;
-  error: string | null = null;
+  hint: string | null = null;
   responseRow: ResponseRow | null = null;
 
   firstName: string = "";
@@ -37,14 +37,8 @@ export class CreateUserComponent implements OnInit {
       this.phone,
       this.email
     );
-    console.log('hello')
     this.responseRow = await this.userService.createUser(this.userData);
 
-    if (this.responseRow.statusCode == 0) {
-      this.globalService.setLoginUser(this.responseRow.entity);
-      this.error = null;
-    } else {
-      this.error = this.responseRow.statusCode + ":" + this.responseRow.statusMsg;
-    }
+    this.hint = this.responseRow.statusCode + ":" + this.responseRow.statusMsg;
   }
 }

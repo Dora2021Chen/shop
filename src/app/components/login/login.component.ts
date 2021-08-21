@@ -1,8 +1,7 @@
 import { GlobalService } from './../../service/global.service';
 import { UserService } from 'src/app/service/user.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ResponseRow } from 'src/app/model/responseRow';
-import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login',

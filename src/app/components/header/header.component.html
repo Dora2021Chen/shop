@@ -3,7 +3,7 @@
   <li><a routerLink="users">Users</a></li>
   <div *ngIf='globalService.hasLogin()'>
     <li style="float:right"><a class="active" routerLink="user">{{globalService.getDisplayName()}}</a></li>
-    <li style="float:right"><a routerLink="">Logout</a></li>
+    <li style="float:right"><a (click)="logout()">Logout</a></li>
   </div>
   <div *ngIf='!globalService.hasLogin()'>
     <li style="float:right"><a routerLink="login">Login</a></li>

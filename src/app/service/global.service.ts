@@ -32,5 +32,6 @@ export class GlobalService {
 
   public clearLoginUser() {
     this.loginUser = null;
+    console.log('user logged out')
   }
 }

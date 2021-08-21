@@ -1,1 +1,26 @@
-<p>user works!</p>
+<div>
+    <div *ngIf="userData!=null">
+        <div>
+            <label>First Name:</label>
+            <span>{{userData.firstName}}</span>
+        </div>
+        <div>
+            <label>Last Name:</label>
+            <span>{{userData.lastName}}</span>
+        </div>
+        <div>
+            <label for="">Username:</label>
+            <span>{{userData.username}}</span>
+        </div>
+        <div>
+            <label for="">Phone:</label>
+            <span>{{userData.phone}}</span>
+        </div>
+        <div>
+            <label for="">Email:</label>
+            <span>{{userData.email}}</span>
+        </div>
+    </div>
+
+    <div *ngIf="userData==null">No user to display</div>
+</div>
