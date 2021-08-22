@@ -3,6 +3,7 @@ import { UserService } from 'src/app/service/user.service';
 import { UserData } from './../../model/user';
 import { Component, OnInit } from '@angular/core';
 import { ResponseRow } from 'src/app/model/responseRow';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-create-user',
@@ -21,11 +22,21 @@ export class CreateUserComponent implements OnInit {
   password1: string = "";
   phone: string = "";
   email: string = "";
+  id?: number | null;
 
   constructor(private userService: UserService,
-    private globalService: GlobalService) { }
+    private globalService: GlobalService,
+    private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.activatedRoute.queryParams.subscribe(params => {
+      this.id = params['id'];
+      console.log(this.id); // Print the parameter to the console. 
+    });
+
+    if (this.id != null) {
+
+    }
   }
 
   async createUser(): Promise<void> {
@@ -40,4 +51,6 @@ export class CreateUserComponent implements OnInit {
     this.responseRow = await this.userService.saveUser(this.userData);
     this.hint = this.responseRow.statusCode + ":" + this.responseRow.statusMsg;
   }
+
+
 }

@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: 'user', component: UserComponent },
   { path: 'login', component: LoginComponent },
   { path: 'login/createUser', component: CreateUserComponent },
+  { path: 'user/modifyUser', component: CreateUserComponent },
   { path: '', redirectTo: 'goods', pathMatch: 'full' },
 ];
 

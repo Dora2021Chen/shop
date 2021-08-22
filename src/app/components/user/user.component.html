@@ -12,7 +12,7 @@
         <br>
         <span class="userDesc">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;{{userData.email}}</span>
         <br>
-        <button class="login" (click)="modify()">Modify</button>
+        <button routerLink="modifyUser">Modify</button>
     </div>
 
     <div *ngIf="userData==null">No user to display</div>
