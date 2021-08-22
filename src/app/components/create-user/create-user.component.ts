@@ -37,8 +37,7 @@ export class CreateUserComponent implements OnInit {
       this.phone,
       this.email
     );
-    this.responseRow = await this.userService.createUser(this.userData);
-
+    this.responseRow = await this.userService.saveUser(this.userData);
     this.hint = this.responseRow.statusCode + ":" + this.responseRow.statusMsg;
   }
 }

@@ -1,0 +1,14 @@
+.wrapper{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:20px;
+    width: 400px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-style: normal;
+}
+
+span{
+    color:red;
+}

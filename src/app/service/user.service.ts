@@ -26,8 +26,7 @@ export class UserService {
     return this.http.get<ResponseRow>(`${this.userApiUrl}login`, { params: params }).toPromise();
   }
 
-  createUser(userDta: UserData): Promise<ResponseRow> {
-    console.log('createUser...')
+  saveUser(userDta: UserData): Promise<ResponseRow> {
     return this.http.post<ResponseRow>(`${this.userApiUrl}save`, userDta).toPromise();
   }
 }

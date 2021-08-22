@@ -1,15 +1,20 @@
-<div>
-    <span *ngIf="error!=null">{{error}}</span>
+<div class="wrapper">
     <div>
-        <label>Username</label>
+        <span *ngIf="error!=null">{{error}}</span>
+    </div>
+    <br>
+    <div>
+        <label>Username&nbsp;</label>
         <input type="text" [(ngModel)]="username" />
     </div>
+    <br>
     <div>
-        <label>Password</label>
+        <label>Password&nbsp;</label>
         <input type="password" [(ngModel)]="password" />
     </div>
+    <br>
     <div>
-        <button (click)="login()">Login</button>
-        <button routerLink="createUser">Register</button>
+        <button class="login" (click)="login()">Login</button>
+        <button class="register" routerLink="createUser">Register</button>
     </div>
 </div>

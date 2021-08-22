@@ -1,25 +1,18 @@
-<div>
+<div class="wrapper">
+    <span class="hint" *ngIf="hint!=null">{{hint}}</span>
+    <br>
     <div *ngIf="userData!=null">
-        <div>
-            <label>First Name:</label>
-            <span>{{userData.firstName}}</span>
-        </div>
-        <div>
-            <label>Last Name:</label>
-            <span>{{userData.lastName}}</span>
-        </div>
-        <div>
-            <label for="">Username:</label>
-            <span>{{userData.username}}</span>
-        </div>
-        <div>
-            <label for="">Phone:</label>
-            <span>{{userData.phone}}</span>
-        </div>
-        <div>
-            <label for="">Email:</label>
-            <span>{{userData.email}}</span>
-        </div>
+        <span class="userDesc">First Name:&nbsp;{{userData.firstName}}</span>
+        <br>
+        <span class="userDesc">Last &nbsp;Name:&nbsp;{{userData.lastName}}</span>
+        <br>
+        <span class="userDesc">User&nbsp; Name:&nbsp;{{userData.username}}</span>
+        <br>
+        <span class="userDesc">Phone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;{{userData.phone}}</span>
+        <br>
+        <span class="userDesc">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;{{userData.email}}</span>
+        <br>
+        <button class="login" (click)="modify()">Modify</button>
     </div>
 
     <div *ngIf="userData==null">No user to display</div>
